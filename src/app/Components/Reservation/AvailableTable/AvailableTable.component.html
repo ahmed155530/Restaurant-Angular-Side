@@ -1,0 +1,123 @@
+<!-- lr reservation section Start -->
+<div style="background-color: black;">
+    <div class="container">
+        <div class="row">
+
+
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="lr_inner_title_heading_wrapper">
+                    <h2>Reservation<span></span></h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="lr_inner_title_right_Wrapper">
+                    <ul>
+                        <li><a href="index.html">Home &nbsp;&nbsp;&nbsp;></a></li>
+                        <li>Reservation</li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="lr_reser_main_section_wrapper lr_om_reser_main_section_wrapper">
+    <div class="lr_reser_heading_main_wrapper" style="width: 100%;">
+        <h2><span class="lr_dots_left"></span>Make A Reservation with Order<span class="lr_dots_right"></span></h2>
+    </div>
+    <!-- <div class="lr_reser_map_left_wrapper">
+        <div id="map"></div>
+      </div> -->
+    <div class="lr_reser_map_right_wrapper">
+        <div class="lr_reser_map_right_inner_wrapper">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="lr_reser_inner_heading">
+                    <h2>Reservation</h2>
+                    <p>+1800-154-175</p>
+                </div>
+            </div>
+            <div class="lr_reser_input_box_main_wrapper">
+                <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="lr_reser_input_box_Wrapper">
+                <input type="text" placeholder="Name">
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="lr_reser_input_box_Wrapper">
+                <input type="text" placeholder="Email">
+              </div>
+            </div> -->
+
+                <form #frm="ngForm" (ngSubmit)="getAvailableTable()">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="lr_reser_input_box_Wrapper">
+                            <input type="date" placeholder="Check-in Date" id="CheckIn" name="CheckIn" #ReservedDate="ngModel" [(ngModel)]="booking.ReservedDate">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="lr_reser_input_box_Wrapper">
+                            <select [(ngModel)]="booking.CheckInTime" #CheckInTime="ngModel" name="checkintime">
+
+                    <!-- <select name="sele" id="" class="form-control" [(ngModel)]="Type">
+                    <option *ngFor="let item of categoryRooms" value={{item.id}}>{{item.type}}</option> -->
+
+                    <option>Time in Hour</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="lr_reser_input_box_Wrapper">
+                            <select>
+                    <option>PM</option>
+                    <option>AM</option>
+                  </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="lr_reser_input_box_Wrapper">
+                            <select name="sele" id="" [(ngModel)]="booking.NOofGuests" #NOofGuests="ngModel">
+                    <option *ngFor="let item of seatList" value={{item}}>{{item}} Guests</option>
+                  </select>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="lr_reser_input_box_Wrapper">
+                  <textarea rows="4" placeholder="Message"></textarea>
+                </div>
+              </div> -->
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="lr_reser_input_box_Wrapper">
+                            <button type="submit" class="lr_reser_btn_background move-eff lr_ff_btn2"><span
+                      style="margin-top : -20px ; margin-left: -8px ; text-align: center;">Search for Table</span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="lr_reser_map_right_inner_img_wrapper">
+            <img src="assets/UserAssets/images/content/sheif_img.png" alt="reser_img">
+        </div>
+    </div>
+</div>
+
+<!-- lr reservation section End -->

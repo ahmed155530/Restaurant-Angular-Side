@@ -1,0 +1,108 @@
+<!-- lr contact get in section Start -->
+<div style="background-color: black;">
+    <div class="container">
+        <div class="row">
+
+
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="lr_inner_title_heading_wrapper">
+                    <h2>Receipt <span></span></h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="lr_inner_title_right_Wrapper">
+                    <ul>
+                        <li><a href="index.html">Home &nbsp;&nbsp;&nbsp;></a></li>
+                        <li>Receipt</li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<div class="lr_contact_gt_main_wrapper">
+    <div class="container">
+
+
+        <div class="lr_gt_left_wrapper">
+            <h2>Reservation Receipt</h2>
+            <div class="lr_gt_time_list_wrapper">
+                <ul>
+                    <li>Customer Name<span>{{this.Receipt.customerName}}</span></li>
+                    <li>Reserved Date<span>{{this.Receipt.reservedDate}}</span></li>
+                    <li>Check-in Time<span>{{this.Receipt.checkInTime}}</span></li>
+                    <li>Check-out Time<span>{{this.Receipt.checkOutTime}}</span></li>
+                    <li>Table NO.<span>{{this.Receipt.tableNO}}</span></li>
+                    <li>NO. of Guests<span>{{this.Receipt.nOofPersons}}</span></li>
+                    <table class="table table-bordered" style="margin-top: 20px; color: white;">
+                        <thead class="thead-dark" style="background-color: black;">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Item Name</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Item Price</th>
+                                <th scope="col">Total Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of this.Receipt.foodOrders; let i=index">
+                                <th scope="row">{{i+1}}</th>
+                                <td>{{item.foodName}}</td>
+                                <td>{{item.quantity}}</td>
+                                <td>{{item.orderPrice}}</td>
+                                <td>{{item.totalOrderPrice}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </ul>
+            </div>
+            <p>Total Cost : {{this.Receipt.totalBookingPrice}}</p>
+            <ul style="color:white">Your visit will be only one hour but you can extend time if it's possible for same table .</ul>
+        </div>
+        <!-- <div class="lr_gt_right_wrapper">
+       <div class="lr_gt_right_heading">
+         <h2>Get In Touch<span></span></h2>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod incididunt ut labore et dolore
+           magna aliqua enim.</p>
+       </div>
+       <div class="lr_gt_chef_img">
+         <img src="assets/UserAssets/images/content/contact/chef.png" alt="chef_img">
+       </div>
+       <div class="lr_gt_bur_img">
+         <img src="assets/UserAssets/images/content/contact/bur.png" alt="chef_img">
+       </div>
+       <div class="row">
+         <div class="blog_contect_wrapper lr_gt_contact_form_Wrapper">
+           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+             <div class="contect_form1">
+               <input type="text" placeholder="Name"><i class="fa fa-user"></i>
+             </div>
+           </div>
+           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+             <div class="contect_form2">
+               <input type="email" placeholder="Email"><i class="fa fa-envelope"></i>
+             </div>
+           </div>
+           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+             <div class="contect_form4">
+               <textarea rows="6" placeholder="Comment"></textarea>
+             </div>
+           </div>
+           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+             <div class="lr_bs_effect_btn">
+               <a href="#" class="lr-btn-background move-eff lr_ff_btn2"><span>send</span></a>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div> -->
+
+    </div>
+</div>
+
+
+<!-- lr contact get in section End -->

@@ -1,0 +1,91 @@
+    <div class="lr_blog_categories_main_wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+            <div class="row">
+
+
+              <div class="lr_about_index_particles_effect_wrapper">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <div class="lr_index_about_img_wrapper">
+                        <img src="assets/UserAssets/images/content/about_img.jpg" alt="about_img">
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <div class="lr_index_about_right_wrapper">
+                        <h2>{{food.name}}<span></span></h2>
+                        <h3>{{food.price}} $</h3>
+                        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim anim veniam, quis
+                          nostrud
+                          exercitation ullamco laboris nisi ut aliquip ex ea commodat. Duis aute irure dolor in
+                          reprehenderit in
+                          voluptate velit esse
+                          cillum doore eu fgiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                          culpa qui
+                          officia deserunt mollit anim id est laborum.<br><br>Sed do eiusmod tempor incididunt ut labore
+                          et dolore
+                          magna aliqua.
+                          Ut enim anim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodat.
+                          Duis aute
+                          irure dolor in reprehenderit in voluptate velit esse cillum doore eu fgiat nulla pariatur.
+                          Excepteur sint
+                          occaecat
+                          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <a href="#" class="lr-btn lr-btn2 move-eff"><span>ABOUT US</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+              <div class="blog_single_comment_heading_wrapper">
+                <div class="lr_element_section_heading_wrapper lr_blog_single_comment_heading">
+                  <h2>Reviews<span></span></h2>
+                </div>
+              </div>
+
+
+
+
+
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" *ngFor="let item of reviews; let i=index">
+                <div class="jp_blog_single_client_main_section">
+                  <div class="jp_blog_single_client_img">
+                    <img src="assets/UserAssets/images/content/blog/bs3.jpg" alt="blog_client" class="img-circle" />
+                  </div>
+                  <div class="jp_blog_single_client_cont">
+                    <p style="float: right;">{{item.postingDate}}</p>
+                    <h3>Admin : John Doe</h3>
+                    <div>
+                      <ul>
+                        <li><i class="fa fa-user-o"></i>&nbsp; <a href="#">Ajay s.</a></li>
+                        <li><i class="fa fa-thumbs-up"></i>&nbsp; <a href="#">512 Like</a></li>
+                        <li><i class="fa fa-comments-o"></i>&nbsp; <a href="#">28 comments</a></li>
+                      </ul>
+                    </div><br /><br />
+                    <p>{{item.reviewContent}}</p>
+                    <ul>
+                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

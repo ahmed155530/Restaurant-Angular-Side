@@ -1,0 +1,180 @@
+/* Checkboxes */
+.checkbox {
+  padding-left: 10px;
+}
+
+.checkbox label {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+  width: 25px;
+  height: 25px;
+}
+
+.checkbox label span {
+  margin-top: 2px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.checkbox label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 0;
+  margin-left: -20px;
+  border: 2px solid #cccccc;
+  border-radius: 5px;
+  background-color: white;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.checkbox label::after {
+  display: inline-block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 0;
+  top: 0;
+  margin-left: -20px;
+  padding-left: 3px;
+  padding-top: 3px;
+  font-size: 14px;
+  color: #777777;
+}
+
+.checkbox+.checkbox,
+.radio+.radio {
+  margin-top: 0;
+}
+
+.checkbox input[type="checkbox"] {
+  opacity: 0;
+}
+
+.checkbox input[type="checkbox"]:checked+label::after {
+  font-family: 'FontAwesome';
+  content: "\f00c";
+  text-align: center;
+}
+
+.checkbox input[type="checkbox"]:disabled+label {
+  opacity: 0.3;
+}
+
+.checkbox input[type="checkbox"]:disabled+label::before {
+  background-color: #ebebeb;
+  cursor: not-allowed;
+  text-align: center;
+}
+
+.checkbox.checkbox-circle label::before {
+  border-radius: 50%;
+}
+
+.checkbox.checkbox-inline {
+  margin-top: 0;
+  text-align: center;
+}
+
+.checkbox-default input[type="checkbox"]:checked+label::before {
+  background-color: #777777;
+  border-color: #777777;
+  text-align: center;
+}
+
+.checkbox-default input[type="checkbox"]:checked+label::after {
+  color: white;
+  text-align: center;
+}
+
+.checkbox-default label {
+  color: #777777;
+  text-align: center;
+}
+
+.checkbox-primary input[type="checkbox"]:checked+label::before {
+  background-color: #9875ab;
+  border-color: #9875ab;
+  text-align: center;
+}
+
+.checkbox-primary input[type="checkbox"]:checked+label::after {
+  color: white;
+  text-align: center;
+}
+
+.checkbox-primary label {
+  color: #9875ab;
+  text-align: center;
+}
+
+.checkbox-success input[type="checkbox"]:checked+label::before {
+  background-color: #87c056;
+  border-color: #87c056;
+  text-align: center;
+}
+
+.checkbox-success input[type="checkbox"]:checked+label::after {
+  color: white;
+  text-align: center;
+}
+
+.checkbox-success label {
+  color: #87c056;
+  text-align: center;
+}
+
+.checkbox-info input[type="checkbox"]:checked+label::before {
+  background-color: #4da5e2;
+  border-color: #4da5e2;
+  text-align: center;
+}
+
+.checkbox-info input[type="checkbox"]:checked+label::after {
+  color: white;
+  text-align: center;
+}
+
+.checkbox-info label {
+  color: #4da5e2;
+  text-align: center;
+}
+
+.checkbox-warning input[type="checkbox"]:checked+label::before {
+  background-color: #ffcc66;
+  border-color: #ffcc66;
+  text-align: center;
+}
+
+.checkbox-warning input[type="checkbox"]:checked+label::after {
+  color: white;
+  text-align: center;
+}
+
+.checkbox-warning label {
+  color: #ffcc66;
+  text-align: center;
+}
+
+.checkbox-danger input[type="checkbox"]:checked+label::before {
+  background-color: #ec7160;
+  border-color: #ec7160;
+  text-align: center;
+}
+
+.checkbox-danger input[type="checkbox"]:checked+label::after {
+  color: white;
+  text-align: center;
+}
+
+.checkbox-danger label {
+  color: #ec7160;
+  text-align: center;
+}
+
+/* / End Checkboxes */

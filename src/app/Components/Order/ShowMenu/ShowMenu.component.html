@@ -1,0 +1,119 @@
+<!-- lr element section Start -->
+<div style="background-color: black;">
+    <div class="container">
+        <div class="row">
+
+
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="lr_inner_title_heading_wrapper">
+                    <h2>Menu <span></span></h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="lr_inner_title_right_Wrapper">
+                    <ul>
+                        <li><a href="index.html">Home &nbsp;&nbsp;&nbsp;></a></li>
+                        <li>Menu</li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<div class="lr_element_section_main_wrapper lr_om_element_section_main_wrapper">
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="lr_element_section_heading_wrapper">
+                    <h2>Best Food Elements<span></span></h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <!-- <div class="lr_element_tabs_main_wrapper">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li>
+                            <div class="slider"></div>
+                        </li>
+                        <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Espresso Coffee</a></li>
+                        <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">Mocha</a></li>
+                        <li role="presentation" class=""><a href="#messages" role="tab" data-toggle="tab">Flat White </a></li>
+                        <li role="presentation"><a href="#settings" role="tab" data-toggle="tab">Long Black</a></li>
+                    </ul>
+                </div> -->
+
+
+                <div>
+                    <span style="color: #e38612; font-weight: 600; font-size:22px; margin: 20px;">Food Category :</span>
+                    <select name="Category" [(ngModel)]="CategoryId" (change)="getProductsByCatId()" style="opacity: 0.3;width: 250px;">
+                          <option *ngFor="let item of CategoriesList " value="{{item.id}} ">{{item.name}}</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <button name="filt " (click)="getFilteredProducts() ">filter</button> -->
+
+    <div class="lr_element_left_img_main_wrapper hidden-xs ">
+        <div class="lr_element_img_back_box_wrapper ">
+            <img src="assets/UserAssets/images/content/e1.jpg " alt="element_img ">
+        </div>
+    </div>
+
+
+
+
+
+    <div class="lr_element_right_tabs_cont_main_wrapper ">
+        <div class="lr_element_right_tabs_img_cont_wrapper ">
+            <div class="tab-content ">
+
+
+
+
+                <div role="tabpanel " class="tab-pane fade in active " id="home ">
+                    <div *ngFor="let item of products; let i=i ndex " class="col-lg-4 col-md-4 col-sm-4 col-xs-4 res_col ">
+                        <div class="lr_ele_tab_img_box_wrapper ">
+                            <div class="lr_ele_img_box_wrapper ">
+                                <div class="lr_ele_img_box_overlay "></div>
+                                <img src="assets/UserAssets/images/content/e2.png " alt="food_img ">
+                            </div>
+                            <div class="lr_ele_img_cont_box_wrapper ">
+                                <h3><a>{{item.name}}</a></h3>
+                                <p>$ {{item.price}}</p>
+                                <div>
+                                    <button (click)="increaseQuantity(item)" id="{{item.name}}">+</button>
+                                    <button (click)="decreaseQuantity(item) ">-</button>
+                                    <div id="{{item.id}} ">
+                                        Quantity :<span> {{item.neededQuantity}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <a style="cursor: pointer; " (click)="sendOrders() " class="lr-btn lr-ev-btn move-eff "><span>PROCEED TO ORDER</span></a> -->
+            </div>
+        </div>
+
+    </div>
+    <a (click)="sendOrders() " class="lr-btn lr-ev-btn move-eff " style="float: right; margin:10px; margin-right: 20px; cursor: pointer; "><span>PROCEED TO ORDER</span></a>
+    <div class="lr_element_left_img_main_wrapper visible-xs ">
+        <div class="lr_element_img_back_box_wrapper ">
+            <img src="assets/UserAssets/images/content/e1.jpg " alt="element_img ">
+        </div>
+    </div>
+
+
+</div>
+<!-- lr element section End -->

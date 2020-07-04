@@ -1,0 +1,107 @@
+<!-- <div class="container">
+    <div style="width: 70%;">
+        <form #frm="ngForm" (ngSubmit)="addUser()">
+            <div class="form-group">
+                <label for="userName">User Name</label>
+                <input type="text" #userName="ngModel" [class.is-invalid]="userName.invalid && userName.touched" [class.is-valid]="userName.valid" [(ngModel)]="user.UserName" required minlength="3" name="UserName" id="userName" class="form-control" placeholder="" aria-describedby="helpId"
+                    style="border-radius: 50px;">
+                <small [hidden]="userName.valid || userName.untouched" id="helpId" class="text-muted">Name must be more than 3
+          letters</small>
+            </div>
+            <div class="form-group">
+                <label for="userPass">Password</label>
+                <input type="password" [(ngModel)]="user.Password" name="pass" required min="1" id="userPass" class="form-control" placeholder="" aria-describedby="helpId" style="border-radius: 50px;">
+                <small id="helpId" class="text-muted">Help text</small>
+            </div>
+            <div class="form-group">
+                <label for="userPass">Email</label>
+                <input type="email" [(ngModel)]="user.Email" name="cnfpass" required min="1" id="userCNFPass" class="form-control" placeholder="" aria-describedby="helpId" style="border-radius: 50px;">
+                <small id="helpId" class="text-muted">Help text</small>
+            </div>
+
+            <button type="submit" [disabled]="frm.invalid" class="btn" style="background-color: sandybrown; color: white; float: right; border-radius: 20px;">Register</button>
+        </form>
+    </div>
+</div> -->
+
+
+
+<div style="background-color: black;">
+    <div class="container">
+        <div class="row">
+
+
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="lr_inner_title_heading_wrapper">
+                    <h2>Register<span></span></h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="lr_inner_title_right_Wrapper">
+                    <ul>
+                        <li><a href="index.html">Home &nbsp;&nbsp;&nbsp;></a></li>
+                        <li>Register</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<div class="lr_contact_gt_main_wrapper">
+    <div class="container">
+        <div class="lr_gt_right_wrapper">
+            <div class="lr_gt_right_heading">
+                <h2>Register<span></span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod incididunt ut labore et dolore magna aliqua enim.</p>
+            </div>
+            <div class="lr_gt_chef_img">
+                <img src="assets/UserAssets/images/content/contact/chef.png" alt="chef_img">
+            </div>
+            <div class="lr_gt_bur_img">
+                <img src="assets/UserAssets/images/content/contact/bur.png" alt="chef_img">
+            </div>
+            <div class="row">
+                <form #frm="ngForm" (ngSubmit)="addUser()">
+                    <div class="blog_contect_wrapper lr_gt_contact_form_Wrapper">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="contect_form1">
+                                <input type="text" placeholder="User Name" #userName="ngModel" [class.is-invalid]="userName.invalid && userName.touched" [class.is-valid]="userName.valid" [(ngModel)]="user.UserName" required minlength="3" name="UserName" id="userName" aria-describedby="helpId"
+                                /><i class="fa fa-user"></i>
+                                <small [hidden]="userName.valid || userName.untouched" id="helpId" class="text-muted">Name must be more
+                  than 3
+                  letters</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="contect_form2">
+                                <input type="email" #email="ngModel" placeholder="Email" [(ngModel)]="user.Email" name="cnfpass" required min="1" id="email" aria-describedby="helpId"><i class="fa fa-envelope"></i>
+                                <small [hidden]="email.valid || email.untouched" id="helpId" class="text-muted">Help
+                  text</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="contect_form1">
+                                <input type="password" #password="ngModel" placeholder=" password " [(ngModel)]="user.Password" name="pass" required min="6" id="userPass" aria-describedby="helpId" /><i class="fa fa-key"></i>
+                                <small [hidden]="password.valid || password.untouched" id="helpId" class="text-muted">Help
+                  text</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                            <div class="lr_bs_effect_btn ">
+                                <button style=" cursor: pointer;" type="submit" [disabled]="frm.invalid" class="lr-btn-background move-eff lr_ff_btn2"><span
+                    style="margin-top : -20px ; margin-left: -8px ; text-align: center;">Register</span></button>
+                                <a [routerLink]="['/login/']" style="color:#e38612 ;">You have already an account ,
+                                  Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

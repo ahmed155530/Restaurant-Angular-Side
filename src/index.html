@@ -6,8 +6,86 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+  <link type="text/css" rel="stylesheet" href="/assets/UserAssets/css/animate.css">
+  <link type="text/css" rel="stylesheet" href="/assets/UserAssets/css/bootstrap.css">
+  <link type="text/css" rel="stylesheet" href="/assets/UserAssets/css/flaticon.css">
+  <link type="text/css" rel="stylesheet" href="/assets/UserAssets/css/font-awesome.css">
+  <link type="text/css" rel="stylesheet" href="/assets/UserAssets/css/fonts.css">
+  <link type="text/css" rel="stylesheet" href="/assets/UserAssets/css/magnific-popup.css">
+  <link type="text/css" rel="stylesheet" href="/assets/UserAssets/css/owl.carousel.css">
+  <link type="text/css" rel="stylesheet" href="/assets/UserAssets/css/owl.theme.default.css">
+  <link type="text/css" rel="stylesheet" href="/assets/UserAssets/css/responsive.css">
+  <!-- <link type="text/css" rel="stylesheet" href="/assets/UserAssets/css/responsive2.css">
+  <link type="text/css" rel="stylesheet" href="/assets/UserAssets/css/responsive3.css"> -->
+  <link type="text/css" rel="stylesheet" href="/assets/UserAssets/css/style.css">
+  <!-- <link type="text/css" rel="stylesheet" href="/assets/UserAssets/css/style2.css">
+  <link type="text/css" rel="stylesheet" href="/assets/UserAssets/css/style3.css"> -->
+  <link type="text/css" rel="stylesheet" href="/assets/UserAssets/css/venobox.css">
+  <link type="text/css" rel="stylesheet" href="/assets/UserAssets/js/plugin/rs_slider/layers.css">
+  <link type="text/css" rel="stylesheet" href="/assets/UserAssets/js/plugin/rs_slider/navigation.css">
+  <link type="text/css" rel="stylesheet" href="/assets/UserAssets/js/plugin/rs_slider/settings.css">
+
 </head>
 <body>
   <app-root></app-root>
+
+
+
+    <!--main js file start-->
+    <script src="assets/UserAssets/js/jquery_min.js"></script>
+    <script src="assets/UserAssets/js/modernizr.js"></script>
+    <script src="assets/UserAssets/js/bootstrap.js"></script>
+    <script src="assets/UserAssets/js/owl.carousel.js"></script>
+    <script src="assets/UserAssets/js/parallax.min.js"></script>
+    <script src="assets/UserAssets/js/bubble-app.js"></script>
+    <script src="assets/UserAssets/js/tilt.jquery.js"></script>
+    <script src="assets/UserAssets/js/jquery.countTo.js"></script>
+    <script src="assets/UserAssets/js/jquery.inview.min.js"></script>
+    <script src="assets/UserAssets/js/jarallax.js"></script>
+    <script src="assets/UserAssets/js/jquery.magnific-popup.js"></script>
+    <script src="assets/UserAssets/js/jquery.counterup.min.js"></script>
+    <script src="assets/UserAssets/js/jquery.downCount.js"></script>
+    <script src="assets/UserAssets/js/waypoints.min.js"></script>
+    <script src="assets/UserAssets/js/venobox.min.js"></script>
+    <script src="assets/UserAssets/js/custom.js"></script>
+    <!--main js file end-->
+    <script>
+      function initMap() {
+        var uluru = {
+          lat: -36.742775,
+          lng: 174.731559
+        };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          scrollwheel: false,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmdG8C6ItElq5ipuFv6O9AE48wyZm_vqU&amp;callback=initMap">
+    </script>
+    <script>
+      $(".lr_element_tabs_main_wrapper .nav-tabs a").click(function () {
+        var position = $(this).parent().position();
+        var width = $(this).parent().width();
+        $(".slider").css({
+          "left": +position.left,
+          "width": width
+        });
+      });
+      var actWidth = $(".lr_element_tabs_main_wrapper .nav-tabs .active").width();
+      var actPosition = $(".lr_element_tabs_main_wrapper .nav-tabs .active").position();
+      $(".slider").css({
+        "left": +actPosition.left,
+        "width": actWidth
+      });
+    </script>
 </body>
 </html>

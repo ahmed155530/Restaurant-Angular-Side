@@ -1,0 +1,98 @@
+ <!-- preloader Start -->
+ <!-- <div id="preloader">
+   <div id="status">
+     <img src="assets/UserAssets/images/header/loader.gif" id="preloader_image" alt="loader">
+   </div>
+ </div> -->
+
+
+
+
+ <!-- color picker start -->
+ <!-- <div id="style-switcher">
+   <div>
+     <h3>Choose Color</h3>
+     <ul class="colors">
+       <li>
+         <p class='colorchange' id='color'></p>
+       </li>
+       <li>
+         <p class='colorchange' id='color2'></p>
+       </li>
+       <li>
+         <p class='colorchange' id='color3'></p>
+       </li>
+       <li>
+         <p class='colorchange' id='color4'></p>
+       </li>
+       <li>
+         <p class='colorchange' id='color5'></p>
+       </li>
+       <li>
+         <p class='colorchange' id='style'></p>
+       </li>
+     </ul>
+   </div>
+   <div class="bottom"> <a href="#" class="settings"><i class="fa fa-gear"></i></a> </div>
+ </div> -->
+ <!-- color picker end -->
+
+
+
+
+ <!-- header and navigation Start -->
+ <div class="lr_inner_header_navigation_main_wrapper">
+   <div class="lr_navigation_header_fixed lr_inner_top_header_navigation_wrapper">
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+           <div class="lr_logo_mian_wrapper">
+             <a href="index.html"><img src="assets/UserAssets/images/header/logo.png" alt="logo"></a>
+           </div>
+         </div>
+         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+           <div class="lr_main_navigation_wrapper">
+             <nav class="main-menu navbar-expand-lg">
+               <div class="navbar-header">
+                 <!-- Toggle Button -->
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                 </button>
+               </div>
+
+               <div class="navbar-collapse collapse clearfix">
+                 <ul class="navigation clearfix">
+                   <li routerLinkActive="active-link" class=" dropdown"><a [routerLink]="['/']" routerLinkActive="router-link-active" >Home</a></li>
+                   <li style="cursor: pointer;" class="dropdown"><a>Reservation</a>
+                     <ul>
+                       <li><a [routerLink]="['/reserve/']">Reserve Table</a></li>
+                       <li><a [routerLink]="['/search/']">Reserve Table & Order</a></li>
+                     </ul>
+                   </li>
+                  <li><a routerLinkActive="active-link" [routerLink]="['/about/']">About Us</a></li>
+                   <li ><a routerLinkActive="active-link" routerLinkActive="active-link"  [routerLink]="['/contact/']">Contact Us</a></li>
+                   <li *ngIf="!islogged"><a routerLinkActive="active-link"  [routerLink]="['/login/']">Login</a></li>
+                    <li *ngIf="!islogged"><a routerLinkActive="active-link" [routerLink]="['/register/']">Register</a></li>
+
+
+
+                   <li style="cursor: pointer;" *ngIf="islogged" class="dropdown"><a>Account</a>
+                     <ul>
+                       <li><a routerLinkActive="active-link" [routerLink]="['/myAccount/']">My Account</a></li>
+                       <li><a  (click)="logout()" [routerLink]="['/']">Logout</a></li>
+                     </ul>
+                   </li>
+
+
+
+                 </ul>
+               </div>
+             </nav>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
